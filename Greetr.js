@@ -6,6 +6,17 @@
 	}
 
 	
+	var greetings = {
+
+		en: 'Hello',
+		es: 'Hola'
+	};
+
+	var formal_greetings = {
+		en: 'Greetings',
+		es: 'Saludos'
+	};
+	
 
 	Greetr.init = function (firstname, lastname, language) {
 		
