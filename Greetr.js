@@ -36,6 +36,25 @@
 
 		formal_greeting: function() {
 			return formal_greetings[this.language] + ' ' + this.firstname + ' ' + this.lastname ;
+		},
+
+		greet: function(greet_type){
+
+			var msg; 
+
+			if(greet_type == "formal"){
+				msg = this.formal_greeting();
+			}
+
+			else{
+				msg = this.greeting();
+			}
+
+			if(console){
+				console.log(msg);
+			}
+
+			return this;
 		}
 	}
 
