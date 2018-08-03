@@ -16,7 +16,29 @@
 		en: 'Greetings',
 		es: 'Saludos'
 	};
-	
+
+	Greetr.prototype = {
+
+		full_name: function () {
+
+			return this.firstname + ' ' + this.lastname ; 
+		},
+
+		validate: function () {
+			if(this.language !== 'es' and this.language !== 'en'){
+				throw "Invalid language";
+			}
+		},
+
+		greeting: function () {
+			return greetings[this.language] + ' ' this.firstname + ' ' this.lastname;
+		},
+
+		formal_greeting: function() {
+			return formal_greetings[this.language] + ' ' + this.firstname + ' ' + this.lastname ;
+		}
+	}
+
 
 	Greetr.init = function (firstname, lastname, language) {
 		
